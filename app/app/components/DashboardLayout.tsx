@@ -524,8 +524,8 @@ import { showInfo } from "@/utils/toast";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import { Avatar } from "@/components/ui/avatar";
-import { UserRoles } from "@/app/api/auth/[...nextauth]/route";// Import the loading component
 import ContentLoadingOverlay from "./content-loading";
+import { UserRoles } from "@/lib/types";
 
 // Type for sidebar menu items with role restrictions
 interface MenuItem {

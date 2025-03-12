@@ -2,8 +2,8 @@
 
 import { create } from "zustand";
 import { signIn, signOut, getSession } from "next-auth/react";
-import { User, UserRoles } from "@/app/api/auth/[...nextauth]/route";
 import { showSuccess, showError, showInfo } from "@/utils/toast";
+import { User, UserRoles } from "@/lib/types";
 
 interface AuthState {
   user: User | null;

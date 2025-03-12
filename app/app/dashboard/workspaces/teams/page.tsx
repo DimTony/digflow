@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { UserRoles } from "@/app/api/auth/[...nextauth]/route";
 import {
   Filter,
   Plus,
@@ -18,6 +17,7 @@ import {
 import Image from "next/image";
 import AddTeamModal from "@/app/components/AddTeamModal";
 import { useRouter } from "next/navigation";
+import { UserRoles } from "@/lib/types";
 
 // Types for our teams data
 interface TeamMember {
