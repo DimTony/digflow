@@ -192,7 +192,7 @@ export default function TeamsPage() {
    };
 
  return (
-   <div className="container mx-auto px-4 pt-6">
+   <div className="container mx-auto px-4 py-4">
      {/* Header with teams count and add button */}
      <div className="flex justify-between items-center mb-6">
        <div className="flex items-center gap-2">
