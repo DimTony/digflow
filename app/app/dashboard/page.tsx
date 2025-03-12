@@ -1,90 +1,3 @@
-// "use client";
-
-// import { useSession, signOut } from "next-auth/react";
-// import { useRouter } from "next/navigation";
-
-// export default function Dashboard() {
-//   const { data: session, status } = useSession();
-//   const router = useRouter();
-
-//   const handleSignOut = async () => {
-//     await signOut({ redirect: false });
-//     router.push("/login");
-//   };
-
-//   if (status === "loading") {
-//     return (
-//       <div className="flex h-screen items-center justify-center">
-//         <div className="text-center">
-//           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
-//           <p className="mt-4">Loading...</p>
-//         </div>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="min-h-screen bg-gray-100 p-8">
-//       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
-//         <div className="flex justify-between items-center mb-6 border-b pb-4">
-//           <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
-//           <button
-//             onClick={handleSignOut}
-//             className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-//           >
-//             Sign Out
-//           </button>
-//         </div>
-
-//         {session ? (
-//           <div>
-//             <div className="bg-green-50 p-4 rounded-md mb-6">
-//               <h2 className="text-green-800 font-medium mb-2">
-//                 Authentication Successful!
-//               </h2>
-//               <p className="text-green-700">
-//                 You are now logged in and viewing a protected page.
-//               </p>
-//             </div>
-
-//             <div className="bg-gray-50 p-4 rounded-md">
-//               <h3 className="font-medium mb-2">Your User Information:</h3>
-//               <ul className="space-y-2">
-//                 <li>
-//                   <strong>Name:</strong> {session.user.name}
-//                 </li>
-//                 <li>
-//                   <strong>Username:</strong> {session.user.username}
-//                 </li>
-//                 <li>
-//                   <strong>ID:</strong> {session.user.id}
-//                 </li>
-//                 <li>
-//                   <strong>Roles:</strong> {session.user.roles.join(", ")}
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-//         ) : (
-//           <div className="bg-red-50 p-4 rounded-md">
-//             <h2 className="text-red-800 font-medium">Not Authenticated</h2>
-//             <p className="text-red-700">
-//               You shouldn't be seeing this page. Please log in.
-//             </p>
-//             <button
-//               onClick={() => router.push("/login")}
-//               className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-//             >
-//               Go to Login
-//             </button>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useSession } from "next-auth/react";
@@ -93,7 +6,7 @@ export default function Dashboard() {
   const { data: session } = useSession();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h1 className="text-2xl font-bold">
           Welcome, {session?.user?.name}!
