@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import { UserRoles } from "@/app/api/auth/[...nextauth]/route";
+import { UserRoles } from "@/lib/types";
 
 // Task type definition
 interface Task {

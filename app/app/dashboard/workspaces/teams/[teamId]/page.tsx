@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { UserRoles } from "@/app/api/auth/[...nextauth]/route";
+import { UserRoles } from "@/lib/types";
 
 // Project interface
 interface Project {

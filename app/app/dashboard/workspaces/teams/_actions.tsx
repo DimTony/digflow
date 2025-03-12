@@ -2,7 +2,8 @@
 
 import { getServerSession } from "next-auth/next";
 import { revalidatePath } from "next/cache";
-import { authOptions, UserRoles } from "@/app/api/auth/[...nextauth]/route";
+import { UserRoles } from "@/lib/types";
+import { authOptions } from "@/app/api/_services/auth.service";
 
 // Type definitions
 interface TeamData {

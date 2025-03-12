@@ -1,6 +1,5 @@
 // types/next-auth.d.ts
 import { DefaultSession } from "next-auth";
-import { UserRoles } from "@/app/api/auth/[...nextauth]/route";
 
 export interface ClientProps {
   children: React.ReactNode;
@@ -38,4 +37,19 @@ declare module "next-auth/jwt" {
     roles?: UserRoles[];
     // Don't nest under 'user' property - this causes issues
   }
+}
+
+export enum UserRoles {
+  admin = "Admin",
+  teamManager = "Team Manager",
+  teamMember = "Team Member",
+}
+
+
+export interface User {
+  id: string;
+  name: string;
+  username: string;
+  token?: string;
+  roles: UserRoles[];
 }
